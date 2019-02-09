@@ -2,7 +2,7 @@ import sys
 import os
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship,backref
+from sqlalchemy.orm import relationship, backref
 from sqlalchemy import create_engine
 
 Base = declarative_base()
@@ -45,7 +45,9 @@ class MenuItem(Base):
     price = Column(String(8))
     materials_id = Column(Integer, ForeignKey('materials.id'))
     materials = relationship("Materials",
-                         backref=backref("items", cascade="all,delete-orphan"))
+                             backref=backref("items", cascade="all,\
+                             delete-orphan")
+                             )
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
 
