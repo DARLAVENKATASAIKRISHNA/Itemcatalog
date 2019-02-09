@@ -40,7 +40,7 @@ After this if all goes well access your web application from http://localhost:80
 
          $ python finalproject.py
          
-* The web app will be running on your localhost at port 5050 (http://localhost:8000/)
+* The web app will be running on your localhost at port 8000 (http://localhost:8000/)
 * Open the above mentioned link to use the web app.
 * You can only view the catalog without signing in.
 * To create, update and delete the items in the catlog, sign in using Google+.
