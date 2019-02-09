@@ -2,7 +2,7 @@ import sys
 import os
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from sqlalchemy import create_engine
 
 Base = declarative_base()
@@ -25,6 +25,7 @@ class Materials(Base):
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
+    menu_items = relationship("MenuItem", cascade="all,delete-orphan")
 
     @property
     def serialize(self):
@@ -43,7 +44,8 @@ class MenuItem(Base):
     descrption = Column(String(10))
     price = Column(String(8))
     materials_id = Column(Integer, ForeignKey('materials.id'))
-    materials = relationship(Materials)
+    materials = relationship("Materials",
+                         backref=backref("items", cascade="all,delete-orphan"))
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
 
