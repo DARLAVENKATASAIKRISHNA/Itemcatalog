@@ -12,23 +12,24 @@
 * SQLAchemy
 * OAuth
 * Google Login
-## Needs:
- * Vagrant
- * Udacity Vagrantfile
- * VirtualBox
-## Application are Used to run:
-* Getting Started
-* project make sure that you have proper internet connection.
-* Have Vagrant and Virtual Box installed on your machine.
-* Unzip the file and put the contents in the vagrant directory.
-Steps To run The Vagrant Box:
+## How to run server
+In order to run this server you need to install python(2.7) or higher in your machine(linux/windows).
 
-`` $ vagrant up
-   $ vagrant ssh``
-   
-* To Initialize Database and To initialize the SQLite database
+It is recommended to use vagrant for testing .This will not effect your machine configurations. Here is documentation to install vagrant and [virtual box] (https://www.virtualbox.org/wiki/Documentation)
 
-         $ python database_setup.py
+These instructions assume you have the Udacity-provided Virtual machine
+
+Clone the Udacity Vagrantfile
+
+Go to Vagrant directory and either clone this repo or download and place zip here
+
+`vagrant up` `vagrant ssh`
+
+Connecting vagrant after goto to Shared folders, goto Project Folder The entry point for this project is `finalproject.py` run this file using
+
+`python finalproject.py`
+
+After this if all goes well access your web application from http://localhost:8000
          
 * To load the initial sporting categories
 
