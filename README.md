@@ -39,11 +39,11 @@ Steps To run The Vagrant Box:
 
          $ python finalproject.py
          
-* The web app will be running on your localhost at port 5050 (http://localhost:5050/)
+* The web app will be running on your localhost at port 5050 (http://localhost:8000/)
 * Open the above mentioned link to use the web app.
 * You can only view the catalog without signing in.
 * To create, update and delete the items in the catlog, sign in using Google+.
-* To login using Google+ http://localhost:5050/login to login to the app
+* To login using Google+ http://localhost:8000/login to login to the app
 * To Use Google Authentication Services
 * We will need a client_secret.json file.
 * We can create an application to use Google's OAuth service at https://console.developers.google.com. After creating and downloading client_secret.json file, move it to the directory where it is accessible to the project file. This project uses persistent data storage to create a web application that allows users to perform Create, Read, Update, and Delete operations.
